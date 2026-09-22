@@ -1,0 +1,117 @@
+/* PAGE BACKGROUND */
+.admin-orders {
+  padding: 35px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+}
+
+.admin-orders h1 {
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1b5e20;
+}
+
+/* TABLE CARD STYLE */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* HEADER */
+.admin-table thead {
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
+  color: white;
+}
+
+.admin-table th {
+  padding: 16px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* BODY */
+.admin-table td {
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.admin-table tbody tr {
+  transition: all 0.3s ease;
+}
+
+.admin-table tbody tr:hover {
+  background: #f1f8f4;
+  transform: scale(1.01);
+}
+
+/* STATUS BADGES */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+  animation: pop 0.3s ease;
+}
+
+.status-processing {
+  background: #ff9800;
+}
+
+.status-shipped {
+  background: #2196f3;
+}
+
+.status-delivered {
+  background: #4caf50;
+}
+
+.status-cancelled {
+  background: #f44336;
+}
+
+/* SELECT DROPDOWN */
+.admin-table select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 2px solid #66bb6a;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.admin-table select:hover {
+  background: #e8f5e9;
+  transform: scale(1.05);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

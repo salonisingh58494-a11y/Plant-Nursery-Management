@@ -1,0 +1,12 @@
+.admin-container {
+  display: flex;
+  height: 100vh;
+  background: #f1f5f9;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}

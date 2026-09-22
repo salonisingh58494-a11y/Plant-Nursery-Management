@@ -1,0 +1,218 @@
+.wishlist-page-container {
+    padding: 40px 10%;
+    background-color: #f8f9fa; /* Thoda light grey background */
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wishlist-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.wishlist-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1b1b1b;
+    margin-bottom: 5px;
+}
+
+.wishlist-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* HORIZONTAL CARD REFINEMENT */
+.wishlist-horizontal-card {
+    display: flex;
+    position: relative;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    border: 1px solid #f0f0f0;
+    align-items: center;
+    justify-content: space-between; /* Elements ke beech gap maintain karega */
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.wishlist-horizontal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* DELETE ICON - TOP RIGHT */
+.corner-delete-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #fff;
+    color: #ff4d4d;
+    border: 1px solid #ffebeb;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0 2px 8px rgba(255, 77, 77, 0.1);
+}
+
+.corner-delete-btn:hover {
+    background: #ff4d4d;
+    color: white;
+    transform: rotate(90deg); /* Thoda effect ke liye */
+}
+
+/* IMAGE SECTION */
+.wishlist-img-box {
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.wishlist-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.wishlist-horizontal-card:hover .wishlist-img-box img {
+    transform: scale(1.1);
+}
+
+/* DETAILS SECTION */
+.wishlist-details-box {
+    flex: 1; /* Space consume karega */
+}
+
+.cat-tag {
+    display: inline-block;
+    color: #27ae60;
+    background: #e8f5e9;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.wishlist-details-box h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.new-p {
+    font-size: 26px;
+    font-weight: 700;
+    color: #157347;
+}
+
+.old-p {
+    font-size: 18px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* ACTIONS BUTTON SECTION */
+.wishlist-actions-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 220px;
+}
+
+.buy-now-btn {
+    background: #157347;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.buy-now-btn:hover {
+    background: #0f5a36;
+    box-shadow: 0 4px 12px rgba(21, 115, 71, 0.2);
+}
+
+.add-to-cart-btn {
+    background: white;
+    color: #157347;
+    border: 2px solid #157347;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background: #e8f5e9;
+}
+
+.view-link-text {
+    text-align: center;
+    color: #7f8c8d;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.view-link-text:hover {
+    color: #157347;
+    text-decoration: underline;
+}
+
+/* EMPTY STATE REFINEMENT */
+.empty-wishlist-state {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.empty-icon-box {
+    font-size: 80px;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.shop-now-btn {
+    display: inline-block;
+    background: #157347;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.shop-now-btn:hover {
+    background: #0f5a36;
+}

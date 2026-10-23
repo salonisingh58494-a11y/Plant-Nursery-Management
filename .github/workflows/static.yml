@@ -34,10 +34,16 @@ jobs:
         run: npm ci
 
       - name: Fix Rollup Linux Issue
-        run: npm i @rollup/rollup-linux-x64-gnu  # 👈 Yeh line is error ko solve karegi
+        run: npm i @rollup/rollup-linux-x64-gnu
 
       - name: Build project
         run: npm run build
+
+      - name: Auto Fix Public Image Paths
+        run: |
+          # Yeh step built files (.js, .html, .css) mein se leading slashes ko automatic relative bana dega taaki 404 error na aaye
+          find dist -type f \( -name "*.js" -o -name "*.html" -o -name "*.css" \) -exec sed -i 's|src="/|src="|g' {} +
+          find dist -type f \( -name "*.js" -o -name "*.html" -o -name "*.css" \) -exec sed -i 's|href="/|href="|g' {} +
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

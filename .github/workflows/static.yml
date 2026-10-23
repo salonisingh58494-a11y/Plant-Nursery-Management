@@ -28,23 +28,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
       - name: Clean Install Dependencies
-        run: |
-          npm set progress=false
-          npm install --no-audit --no-fund --loglevel error --legacy-peer-deps
+        run: npm ci --legacy-peer-deps
 
       - name: Fix Rollup Linux Issue
         run: npm i @rollup/rollup-linux-x64-gnu --no-audit --no-fund
 
       - name: Build production bundle
         run: npm run build
-
-      - name: Verify Build Output
-        run: |
-          # Yeh check karega ki dist folder bana ya nahi aur .jsx file .js bani ya nahi
-          ls -la dist
-          ls -la dist/assets || true
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

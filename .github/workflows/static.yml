@@ -33,6 +33,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Fix Rollup Linux Issue
+        run: npm i @rollup/rollup-linux-x64-gnu  # 👈 Yeh line is error ko solve karegi
+
       - name: Build project
         run: npm run build
 

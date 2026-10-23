@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Plant-Nursery-Management/', 
+  base: 'https://salonisingh58494-a11y.github.io/Plant-Nursery-Management/',
 })

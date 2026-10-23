@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/Plant-Nursery-Management">
     <CartProvider>
       <App />
     </CartProvider>

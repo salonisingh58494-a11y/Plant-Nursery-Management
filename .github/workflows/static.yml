@@ -1,4 +1,4 @@
-name: Deploy Vite Site to Pages
+name: Deploy Vite Project
 
 on:
   push:
@@ -31,19 +31,12 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
-
+        run: npm i --legacy-peer-deps 
       - name: Fix Rollup Linux Issue
         run: npm i @rollup/rollup-linux-x64-gnu
 
       - name: Build project
         run: npm run build
-
-      - name: Fix Hardcoded Slash For Public Images
-        run: |
-          # Yeh step built files (.js, .html, .css) mein se direct file names ke aage se leading slash ko absolute se relative bana dega
-          find dist -type f \( -name "*.js" -o -name "*.html" -o -name "*.css" \) -exec sed -i 's|"/perf| "perf|g' {} +
-          find dist -type f \( -name "*.js" -o -name "*.html" -o -name "*.css" \) -exec sed -i 's|/perf|perf|g' {} +
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
